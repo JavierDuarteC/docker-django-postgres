@@ -11,7 +11,7 @@
 # build
 $ docker-compose up --build
 
-# start
+# start development
 $ docker-compose up -d
 
 # start production
