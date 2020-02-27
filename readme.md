@@ -1,4 +1,4 @@
-# Calculador de máquinas para IaaS.
+# Docker config Django and postgres
 
 ## Requirements
 
