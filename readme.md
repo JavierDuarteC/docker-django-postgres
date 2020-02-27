@@ -1,4 +1,4 @@
-# Docker config Django and postgres
+# Docker config Django and postgres Whith Angular
 
 ## Requirements
 
