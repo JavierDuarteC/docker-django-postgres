@@ -1,0 +1,27 @@
+version: '3'
+services:
+    django:
+        build: ./backend
+        command: python backend/manage.py runserver 0.0.0.0:8081
+        volumes: 
+            - .:/code
+        ports:
+            - "8081:8081"
+        depends_on:
+            - db
+    angular:
+        build: ./frontend
+        volumes:
+            - ./app:/usr/src/frontend
+            - /usr/src/app/node_modules
+        ports:
+            - "8080:8080"
+        depends_on:
+            - django
+    db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: postgres
+volumes:
+  data-volume:
